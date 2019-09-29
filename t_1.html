@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial Formulario Envio Datos</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+	
+	<!--
+		 En este ejemplo usamos el PHP para la validación de los campos,
+		pero es mejor usarlo con JavaScript para no cargar el servidor 
+		con este tipo de situaciones:
+
+		onsubmit="return validateForm()" dentro del formulario para llamar a una
+		función, si devuelve true puede seguir pero si devuelve false evidentemente 
+		fallará. Los formularios son tablas bidimensionales.
+	-->
+
+	<form action="php1.php" method="GET">
+
+		<fieldset>
+
+			<legend>Residencias</legend>
+		
+
+			<label>Nombre residencia: <input type="text" name="r_name"></label><br><br>
+			<label>Código universidad: <input type="text" name="r_uni" minlength="6" maxlength="6"></label><br><br>
+			<label>Precio mensual: <input type="number" name="r_precio" value="0"></label><br><br>
+			<label>Comedor Si<input type="checkbox" name="r_com" value="1"></label>
+						   No<input type="checkbox" name="r_com" value="0"><br><br>
+
+			<input type="submit" name="r_envio" value="Enviar">
+
+		</fieldset>
+	</form>
+
+</body>
+</html>
